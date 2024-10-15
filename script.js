@@ -15,24 +15,30 @@ document.addEventListener('DOMContentLoaded', () => {
         const totalSemesters = completedSemesters + remainingSemesters;
         const requiredGPAValue = (targetCGPA * totalSemesters - currentCGPA * completedSemesters) / remainingSemesters;
 
-        requiredGPA.textContent = `Required GPA for remaining semesters: ${requiredGPAValue.toFixed(2)}`;
-
         let funnyText = '';
 
         if (requiredGPAValue <= 0) {
+            requiredGPA.textContent = `Congratulations! You've already achieved your target CGPA.`;
             funnyText = "Whoa, time traveler! You've already nailed it. Maybe invent a flux capacitor next? ⚡🚗";
         } else if (requiredGPAValue > 10) {
-            funnyText = "Um, unless you're planning to bribe the universe, you might want to adjust your target. 🌟🔍";
-        } else if (requiredGPAValue > 9) {
-            funnyText = "Better start a coffee IV drip and say goodbye to sunlight. You've got this! ☕💪";
-        } else if (requiredGPAValue > 8) {
-            funnyText = "Time to channel your inner nerd. Maybe try sleeping with textbooks under your pillow? 🤓📚";
-        } else if (requiredGPAValue > 7) {
-            funnyText = "Doable! Just remember: sleep is for the weak, and Netflix is your enemy. 😴🎬";
-        } else if (requiredGPAValue > 6) {
-            funnyText = "You're in the sweet spot! A little effort, and you'll be golden. Maybe cut back on the memes? 😅📱";
+            requiredGPA.textContent = `Unfortunately, it's not possible to achieve your target CGPA.`;
+            funnyText = "Houston, we have a problem! Your target is out of this world. 🚀 Time to recalibrate your cosmic expectations!";
         } else {
-            funnyText = "Piece of cake! You could probably achieve this GPA in your sleep. Nap time? 🍰😴";
+            requiredGPA.textContent = `Required GPA for remaining semesters: ${requiredGPAValue.toFixed(2)}`;
+            
+            if (requiredGPAValue > 9.5) {
+                funnyText = "Better start a coffee IV drip and say goodbye to sunlight. You've got this! ☕💪";
+            } else if (requiredGPAValue > 9) {
+                funnyText = "Time to channel your inner Einstein. Maybe try growing your hair wild too? 🧠💡";
+            } else if (requiredGPAValue > 8) {
+                funnyText = "Looks like it's time to befriend your textbooks. Who needs a social life anyway? 📚🤓";
+            } else if (requiredGPAValue > 7) {
+                funnyText = "Doable! Just remember: sleep is for the weak, and memes can wait. 😴📱";
+            } else if (requiredGPAValue > 6) {
+                funnyText = "You're in the sweet spot! A little effort, and you'll be golden. Maybe cut back on the cat videos? 😺📺";
+            } else {
+                funnyText = "Piece of cake! You could probably achieve this GPA while juggling flaming torches. 🍰🔥";
+            }
         }
 
         funnyMessage.textContent = funnyText;
