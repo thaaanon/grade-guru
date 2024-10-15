@@ -1,0 +1,86 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #4a69bd;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    text-align: center;
+    color: #778ca3;
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+input {
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button {
+    margin-top: 1.5rem;
+    padding: 0.75rem;
+    background-color: #4a69bd;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #3c55a5;
+}
+
+#result {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #e6f3ff;
+    border-radius: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+.funny-message {
+    font-weight: bold;
+    font-style: italic;
+    color: #e58e26;
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 1.1em;
+}

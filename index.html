@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Guru: Your CGPA Compass</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Grade Guru: Your CGPA Compass</h1>
+        <h2><i>by Bhupender Verma</i></h2>
+        <form id="gradeForm">
+            <label for="currentCGPA">Current CGPA:</label>
+            <input type="number" id="currentCGPA" step="0.01" min="0" max="10" required>
+
+            <label for="completedSemesters">Completed Semesters:</label>
+            <input type="number" id="completedSemesters" min="1" required>
+
+            <label for="remainingSemesters">Remaining Semesters:</label>
+            <input type="number" id="remainingSemesters" min="1" required>
+
+            <label for="targetCGPA">Target CGPA:</label>
+            <input type="number" id="targetCGPA" step="0.01" min="0" max="10" required>
+
+            <button type="submit">Calculate</button>
+        </form>
+
+        <div id="result" class="hidden">
+            <h2>Results:</h2>
+            <p id="requiredGPA"></p>
+            <p id="funnyMessage" class="funny-message"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
