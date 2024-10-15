@@ -20,13 +20,12 @@ document.addEventListener('DOMContentLoaded', () => {
         if (requiredGPAValue <= 0) {
             requiredGPA.textContent = `Congratulations! You've already achieved your target CGPA.`;
             funnyText = "Whoa, time traveler! You've already nailed it. Maybe invent a flux capacitor next? ⚡🚗";
-        } else if (requiredGPAValue > 10) {
-            requiredGPA.textContent = `Unfortunately, it's not possible to achieve your target CGPA.`;
-            funnyText = "Houston, we have a problem! Your target is out of this world. 🚀 Time to recalibrate your cosmic expectations!";
         } else {
-            requiredGPA.textContent = `Required GPA for remaining semesters: ${requiredGPAValue.toFixed(2)}`;
+            requiredGPA.textContent = `Required GPA for each remaining semester: ${requiredGPAValue.toFixed(2)}`;
             
-            if (requiredGPAValue > 9.5) {
+            if (requiredGPAValue > 10) {
+                funnyText = "Uh-oh! Unless you've got a time-turner or you're planning to bribe the universe, you might need to have a chat with your college dean. 😏 Maybe bring cookies? 🍪";
+            } else if (requiredGPAValue > 9.5) {
                 funnyText = "Better start a coffee IV drip and say goodbye to sunlight. You've got this! ☕💪";
             } else if (requiredGPAValue > 9) {
                 funnyText = "Time to channel your inner Einstein. Maybe try growing your hair wild too? 🧠💡";
@@ -39,6 +38,10 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 funnyText = "Piece of cake! You could probably achieve this GPA while juggling flaming torches. 🍰🔥";
             }
+        }
+
+        if (requiredGPAValue > 10) {
+            funnyText += " P.S. Achieving a GPA over 10 isn't actually possible... unless you've unlocked some secret level of academia we don't know about! 🎓✨";
         }
 
         funnyMessage.textContent = funnyText;
